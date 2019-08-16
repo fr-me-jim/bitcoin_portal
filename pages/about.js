@@ -1,5 +1,11 @@
+import Master from '../components/Master';
+
 const About = () => (  
-    <p>Hello world from About</p>
+    <Master>
+        <div>
+            <p>Hello world from About</p>
+        </div>
+    </Master>
 );
  
 export default About;
