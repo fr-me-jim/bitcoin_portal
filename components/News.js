@@ -30,7 +30,7 @@ const News = ({news}) => {
                     <h3 className="card-title">{title}</h3>
                     <p className="card-text">{description}</p>
                     <p className="card-text">{source.name}</p>
-                    <a href={url} className="btn btn-success d-block">More</a>
+                    <a href={url} target="_blank" rel="noopener noreferrer" className="btn btn-success d-block">More</a>
                 </div>
             </div>
         </div>
