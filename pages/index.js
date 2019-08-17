@@ -49,21 +49,29 @@ Index.getInitialProps = async () => {
         gzip: true
     }
 
+    
+    // try {
+        
+    // } catch (error) {
+    //     console.log(error);
+    //     return {
+    //         bitcoinValue: {},
+    //         bitcoinNews: [],
+    //         bitcoinEvents: []
+    //     }
+    // }
+
     const responseValue = await axios.get(urlValue, reqOptions);
     const responseNews = await axios.get(urlNews);
     const responseEvents = await axios.get(urlEvents);
-    // try {
-        
-    //     console.log(response);
-    // } catch (error) {
-    //     console.log(error);
-    // }
 
     return {
         bitcoinValue: responseValue.data.data.BTC.quote.USD,
         bitcoinNews: responseNews.data.articles,
         bitcoinEvents: responseEvents.data.events
     }
+    
+    
 }
 
 export default Index;
